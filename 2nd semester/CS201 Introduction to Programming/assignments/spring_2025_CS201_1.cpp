@@ -7,33 +7,33 @@ int main()
 {
     string name = "Muhammad Danish Sajjad";
     string vuId = "BC240409225";
-    string numaricPartInput;
+    string numericPartInput;
 
     cout << "Name:  " << name << endl;
     cout << "VU-ID: " << vuId << endl
          << endl;
 
-    cout << "Enter numaric part of VU-ID: ";
-    cin >> numaricPartInput;
+    cout << "Enter numeric part of VU-ID: ";
+    cin >> numericPartInput;
 
-    if (numaricPartInput.length() != 9)
+    if (numericPartInput.length() != 9)
     {
         cout << "Invalid VU-ID provided, please try again (9 digits allowed)" << endl;
         return 1;
     }
 
-    for (int i = 0; i < numaricPartInput.length(); ++i)
+    for (int i = 0; i < numericPartInput.length(); ++i)
     {
-        if (!isdigit(numaricPartInput[i]))
+        if (!isdigit(numericPartInput[i]))
         {
             cout << "Invalid VU-ID provided, please try again (only digits allowed)." << endl;
             return 1;
         }
     }
 
-    string numaricPartInputMiddleDigits = numaricPartInput.substr(2, 5);
+    string numericPartInputMiddleDigits = numericPartInput.substr(2, 5);
     cout << endl
-         << "Extracted Middle Five Digits: " << numaricPartInputMiddleDigits << endl
+         << "Extracted Middle Five Digits: " << numericPartInputMiddleDigits << endl
          << endl;
 
     const int MENU_SIZE = 5;
@@ -56,7 +56,7 @@ int main()
 
     for (int i = 0; i < MENU_SIZE; i++)
     {
-        int itemQuantity = numaricPartInputMiddleDigits[i] - '0';
+        int itemQuantity = numericPartInputMiddleDigits[i] - '0';
 
         if (itemQuantity == 0)
         {
@@ -71,10 +71,12 @@ int main()
     cout << endl;
 
     const int DISCOUNT_THRESHOLD = 5000;
+    const double DISCOUNT_RATE = 0.10; // 10% discount
     bool isDiscountApply = totalBill >= DISCOUNT_THRESHOLD;
-    int discountAmount = totalBill * 0.10; // 10% discount
+    int discountAmount = 0;
     if (isDiscountApply)
     {
+        discountAmount = totalBill * DISCOUNT_RATE;
         cout << "Suprise! You've unlocked a 10% discount" << endl
              << endl;
     }
@@ -88,7 +90,7 @@ int main()
     cout << "Net Payable Amount: Rs. " << (isDiscountApply ? totalBill - discountAmount : totalBill) << endl
          << endl;
 
-    cout << "Tnaks you for visiting C++ Cafe!" << endl;
+    cout << "Thank you for visiting C++ Cafe!" << endl;
 
     return 0;
 }
