@@ -1,6 +1,3 @@
-// Write a program in which you have to declare an integer array of size 10 and initializes it with numbers of your choice. Find the maximum and minimum number from the array and output the numbers on the screen.
-// For finding the maximum and minimum numbers from the array you need to declare two functions findMax and findMin which accept an array and size of array (an int variable) as arguments and find the max min numbers, and return those values.
-
 #include <iostream>
 
 int findMax(int[], int);
