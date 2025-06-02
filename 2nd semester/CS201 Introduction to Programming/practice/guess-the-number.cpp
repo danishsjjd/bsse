@@ -44,7 +44,7 @@ int main() {
     std::cout << "Yay! 🎉 you guess the number in " << tries << " tries."
               << std::endl;
   } else {
-    std::cout << "You lose!";
+    std::cout << "You lose!" << std::endl;
   }
 
   std::cout << "DEBUG: tries: " << tries << " randomNumber: " << randomNumber << " guess: " << guess << std::endl;
