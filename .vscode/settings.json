@@ -53,6 +53,7 @@
     "cstddef": "cpp",
     "tuple": "cpp",
     "iomanip": "cpp",
-    "global": "cpp"
+    "global": "cpp",
+    "chrono": "cpp"
   }
 }
