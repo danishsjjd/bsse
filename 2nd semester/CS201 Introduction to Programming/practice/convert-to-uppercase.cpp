@@ -1,6 +1,4 @@
 #include <iostream>
-#include <ctype.h>
-#include <stdlib.h>
 using namespace std;
 
 void convertToUppercase(char *);

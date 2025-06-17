@@ -2,10 +2,9 @@
  * We use swap function to interchange the values by using pointers
  */
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
 
-/* Prototye of function swap used to swap two values */
+/* Prototype of function swap used to swap two values */
 void swap(int *, int *);
 int main()
 {
@@ -14,7 +13,7 @@ int main()
     for (i = 0; i < 10; i++)
     {
         swaps = 0;
-        for (j = 0; j < 10; j++)
+        for (j = 0; j < 9; j++)
         {
             if (x[j] > x[j + 1]) // compare two values and interchange if needed
             {
@@ -22,7 +21,7 @@ int main()
                 swap(&x[j], &x[j + 1]);
             }
         }
-        // display the array’s elements after each comparison
+        // display the array's elements after each comparison
         for (j = 0; j < 10; j++)
             cout << x[j] << '\t';
         cout << endl;

@@ -10,7 +10,7 @@ int main()
     cout << "Accessing 6th element of array as *(yptr + 5) = " << *(yptr + 5) << endl;
     cout << "Accessing 6th element of array as yptr[5] = " << yptr[5] << endl;
 
-    (*(yptr + 5))++;
+    (*(yptr + 5))++; // incrementing the value of 6th element of array
 
     cout << "Now 6th element as y[5] = " << y[5] << endl;
     cout << "Now 6th element as yptr[5] = " << yptr[5] << endl;
@@ -29,7 +29,7 @@ int main()
     int z[10], *zptr1, *zptr2;
     zptr1 = &z[0];
     zptr2 = &z[3];
-    // zptr1 - zptr2; // Compiler error
+    // zptr1 - zptr2; // Compiler warning: expression result unused
     cout << " The difference = " << zptr2 - zptr1 << endl;
 
     char name[5] = "Amir"; // 4 characters + 1 null character

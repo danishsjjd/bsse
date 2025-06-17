@@ -1,9 +1,11 @@
 #include <iostream>
 
-void reverse(char arr[], int size) {
+void reverse(char arr[], int size)
+{
   int start = 0;
-  int end = size - 2;  // -2 because size includes null terminator
-  while (start < end) {
+  int end = size - 2; // -2 because size includes null terminator
+  while (start < end)
+  {
     // Swap characters
     char temp = arr[start];
     arr[start] = arr[end];
@@ -13,7 +15,8 @@ void reverse(char arr[], int size) {
   }
 }
 
-int main() {
+int main()
+{
   // int number1 = 1;
   // int number2 = 2;
 
